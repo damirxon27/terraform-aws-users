@@ -4,9 +4,13 @@
      }
 
      variable "users" {
-       type = map(string)
-       description = "A map of IAM users and their roles."
-     }
+  type = map(string)
+  default = {
+    "user1" = "default_role1"
+    "user2" = "default_role2"
+  }
+}
+
      
 
    
