@@ -28,3 +28,12 @@ terraform {
     } 
   } 
 }
+module "iam_users" {
+  source     = "git@github.com:damirxon27/terraform-aws-users.git"
+  group_name = "example-group"
+  users = {
+    "user1" = "Admin"
+    "user2" = "Developer"
+  }
+}
+
